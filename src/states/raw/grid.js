@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getGridSecondaryState = exports.getGridProductionState = exports.getGridConsumptionState = void 0;
+var base_1 = require("./base");
+var getGridConsumptionState = function (hass, config) { return (0, base_1.getFieldOutState)(hass, config, "grid"); };
+exports.getGridConsumptionState = getGridConsumptionState;
+var getGridProductionState = function (hass, config) { return (0, base_1.getFieldInState)(hass, config, "grid"); };
+exports.getGridProductionState = getGridProductionState;
+var getGridSecondaryState = function (hass, config) { return (0, base_1.getSecondaryState)(hass, config, "grid"); };
+exports.getGridSecondaryState = getGridSecondaryState;

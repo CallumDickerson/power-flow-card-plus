@@ -452,7 +452,7 @@ export class PowerFlowCardPlus extends LitElement {
     // Battery SoC
     if (battery.state_of_charge.state === null) {
       battery.icon = "mdi:battery";
-    } else if (battery.state_of_charge.state < 5 {
+    } else if (battery.state_of_charge.state < 5) {
       battery.icon = "mdi:battery-outline";
     } else if (battery.state_of_charge.state >= 5 && battery.state_of_charge.state < 15) {
       battery.icon = "mdi:battery-10";
