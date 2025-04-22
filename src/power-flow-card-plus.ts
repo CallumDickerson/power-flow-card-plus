@@ -452,12 +452,28 @@ export class PowerFlowCardPlus extends LitElement {
     // Battery SoC
     if (battery.state_of_charge.state === null) {
       battery.icon = "mdi:battery";
-    } else if (battery.state_of_charge.state <= 72 && battery.state_of_charge.state > 44) {
-      battery.icon = "mdi:battery-medium";
-    } else if (battery.state_of_charge.state <= 44 && battery.state_of_charge.state > 16) {
-      battery.icon = "mdi:battery-low";
-    } else if (battery.state_of_charge.state <= 16) {
+    } else if (battery.state_of_charge.state < 5 {
       battery.icon = "mdi:battery-outline";
+    } else if (battery.state_of_charge.state >= 5 && battery.state_of_charge.state < 15) {
+      battery.icon = "mdi:battery-10";
+    } else if (battery.state_of_charge.state >= 15 && battery.state_of_charge.state < 25) {
+      battery.icon = "mdi:battery-20";
+    } else if (battery.state_of_charge.state >= 25 && battery.state_of_charge.state < 35) {
+      battery.icon = "mdi:battery-30";
+    } else if (battery.state_of_charge.state >= 35 && battery.state_of_charge.state < 45) {
+      battery.icon = "mdi:battery-40";
+    } else if (battery.state_of_charge.state >= 45 && battery.state_of_charge.state < 55) {
+      battery.icon = "mdi:battery-50";
+    } else if (battery.state_of_charge.state >= 55 && battery.state_of_charge.state < 65) {
+      battery.icon = "mdi:battery-60";
+    } else if (battery.state_of_charge.state >= 65 && battery.state_of_charge.state < 75) {
+      battery.icon = "mdi:battery-70";
+    } else if (battery.state_of_charge.state >= 75 && battery.state_of_charge.state < 85) {
+      battery.icon = "mdi:battery-80";
+    } else if (battery.state_of_charge.state >= 85 && battery.state_of_charge.state < 95) {
+      battery.icon = "mdi:battery-90";
+    } else if (battery.state_of_charge.state >= 95) {
+      battery.icon = "mdi:battery";
     }
     if (entities.battery?.icon !== undefined) battery.icon = entities.battery?.icon;
 
